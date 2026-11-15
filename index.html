@@ -1,905 +1,1582 @@
 <!-- 檔名：index.html -->
 <!DOCTYPE html>
-<html lang="zh-Hant" class="scroll-smooth">
+<html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <!-- ⚠️ Google Search Console 驗證標記：請在申請完成後，將整行 <meta name="google-site-verification" ... /> 貼在下方註解處 -->
-  <!-- <meta name="google-site-verification" content="請貼上你的驗證碼" /> -->
+  <!-- Google Search Console 驗證標記 -->
+  <meta name="google-site-verification" content="WpiCiEwrsvsNTrib2DN4pwwMSsZ9FoFYeDp18V3XbrM" />
 
-  <title>巧妮｜身心障礙機構教保督導・特殊教育實務諮詢</title>
-  <meta name="description" content="巧妮個人網站 - 身心障礙機構教保督導，國立臺北教育大學特殊教育學系畢業並取得教師證，累積新竹市 5～6 年實務經驗，提供教保特教諮詢、兒童才藝課業指導與 Canva 美宣海報設計。" />
-  <meta name="keywords" content="巧妮, 身心障礙機構教保督導, 特殊教育, 身障機構, 問題解決, 新竹市特教諮詢, Canva 美宣設計" />
-  <link rel="canonical" href="https://ni0124.github.io/ni0124/" />
+  <!-- SEO 基本設定 -->
+  <title>鄭巧妮 Ni｜溫柔堅定的專業助人者</title>
+  <meta name="description" content="你好，我是鄭巧妮 Ni，一位結合特殊教育專業與社會工作視野的教保督導。擅長服務系統建置、活動設計與細膩傾聽，歡迎預約或詢問服務。">
+  <link rel="canonical" href="https://ni0124.github.io/">
 
   <!-- Open Graph 社群分享標籤 -->
-  <meta property="og:title" content="巧妮｜身心障礙機構教保督導・特殊教育實務諮詢" />
-  <meta property="og:description" content="用特教專業與真誠傾聽，陪伴每個獨特的生命安心前行。提供教保特教諮詢、兒童才藝課業指導與 Canva 美宣海報設計。" />
-  <meta property="og:image" content="https://ni0124.github.io/ni0124/photo.jpg" />
-  <meta property="og:url" content="https://ni0124.github.io/ni0124/" />
-  <meta property="og:type" content="website" />
+  <meta property="og:title" content="鄭巧妮 Ni｜溫柔堅定的專業助人者">
+  <meta property="og:description" content="你好，我是鄭巧妮 Ni，一位結合特殊教育專業與社會工作視野的教保督導。擅長服務系統建置、活動設計與細膩傾聽，歡迎預約或詢問服務。">
+  <meta property="og:image" content="https://ni0124.github.io/hero.jpg">
+  <meta property="og:url" content="https://ni0124.github.io/">
+  <meta property="og:type" content="website">
 
-  <!-- Emoji 網站小圖示 (Favicon) -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌻</text></svg>" />
+  <!-- Emoji Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐚</text></svg>">
 
-  <!-- Google Fonts 圓潤可愛中英文字體 -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Zen+Maru+Gothic:wght@500;700;900&display=swap" rel="stylesheet" />
-
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            warmBg: '#FDFBF7',
-            warmApricot: '#F7EFE5',
-            warmCard: '#FFFFFF',
-            warmOrange: '#E87A3E',
-            warmOrangeLight: '#FFF0E5',
-            warmHoney: '#F59E0B',
-            warmCoffee: '#5C4033',
-            warmMocha: '#785543',
-            warmLatte: '#A68A7B',
-            warmBorder: '#EADBC8'
-          },
-          fontFamily: {
-            round: ['"Zen Maru Gothic"', '"Noto Sans TC"', 'sans-serif'],
-            sans: ['"Noto Sans TC"', '"Zen Maru Gothic"', 'sans-serif']
-          },
-          boxShadow: {
-            bento: '0 10px 30px -5px rgba(92, 64, 51, 0.08)',
-            bentoHover: '0 16px 36px -5px rgba(232, 122, 62, 0.16)'
-          }
-        }
-      }
-    };
-  </script>
+  <!-- Google Fonts: 思源黑體 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
 
   <!-- JSON-LD Person 結構化資料 -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Person",
-    "name": "巧妮",
+    "name": "鄭巧妮 Ni",
     "jobTitle": "身心障礙機構教保督導",
-    "description": "國立臺北教育大學特殊教育學系畢業並取得教師證，累積新竹市 5～6 年多元實務與教保督導經驗。",
-    "url": "https://ni0124.github.io/ni0124/",
-    "image": "https://ni0124.github.io/ni0124/photo.jpg",
-    "email": "mailto:he00781234@gmail.com",
+    "description": "結合特殊教育專業與社會工作視野的教保督導，擅長服務系統建置、活動設計與細膩傾聽。",
+    "url": "https://ni0124.github.io/",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "新竹市",
       "addressCountry": "TW"
     },
-    "knowsAbout": [
-      "特殊教育",
-      "身心障礙機構教保督導",
-      "問題解決",
-      "心理諮商輔導",
-      "Canva 視覺設計"
-    ]
+    "email": "mailto:he00781234@gmail.com"
   }
   </script>
 
   <style>
-    /* 全域基礎設定，防止任何水平捲動並確保文字清晰易讀 */
-    html, body {
-      max-width: 100%;
-      overflow-x: hidden;
-      background-color: #FDFBF7;
-      color: #5C4033;
+    /* =========================================
+       1. 變數與主題色彩設定 (橘色與咖啡色・溫柔暖色系)
+       ========================================= */
+    :root {
+      /* 淺色模式 (預設：紙張質感・暖杏咖啡) */
+      --bg-base: #FAF6F0;
+      --bg-surface: #FFFFFF;
+      --bg-soft: #F3EAE0;
+      --bg-accent-tint: #FFF3E8;
+      --text-primary: #433227;
+      --text-secondary: #6E5849;
+      --text-muted: #937C6D;
+      --primary: #D97742;         /* 溫暖陶橘 */
+      --primary-hover: #C0622F;
+      --secondary: #8C6239;       /* 溫潤咖啡 */
+      --border-color: #E6D8C8;
+      --shadow-sm: 0 4px 14px rgba(67, 50, 39, 0.05);
+      --shadow-md: 0 10px 28px rgba(67, 50, 39, 0.08);
+      --paper-pattern: radial-gradient(rgba(140, 98, 57, 0.06) 1px, transparent 0);
+      --radius-lg: 24px;
+      --radius-md: 16px;
+      --radius-pill: 999px;
+      --font-sans: 'Noto Sans TC', sans-serif;
+      --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+
+    [data-theme="dark"] {
+      /* 深色模式 (夜晚暖咖書房) */
+      --bg-base: #1E1815;
+      --bg-surface: #2A221E;
+      --bg-soft: #352B25;
+      --bg-accent-tint: #3D2B20;
+      --text-primary: #F5ECE4;
+      --text-secondary: #D4C3B5;
+      --text-muted: #A39081;
+      --primary: #E88A56;
+      --primary-hover: #F29C6B;
+      --secondary: #C49A6C;
+      --border-color: #453830;
+      --shadow-sm: 0 4px 14px rgba(0, 0, 0, 0.25);
+      --shadow-md: 0 10px 28px rgba(0, 0, 0, 0.35);
+      --paper-pattern: radial-gradient(rgba(232, 138, 86, 0.07) 1px, transparent 0);
+    }
+
+    /* =========================================
+       2. 基礎重置與紙張質感背景
+       ========================================= */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
       font-size: 16px;
     }
 
-    /* 互動功能 1：捲動淡入動畫 */
-    .reveal-on-scroll {
-      opacity: 0;
-      transform: translateY(24px);
-      transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1), transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--bg-base);
+      background-image: var(--paper-pattern);
+      background-size: 20px 20px;
+      color: var(--text-primary);
+      line-height: 1.75;
+      overflow-x: hidden;
+      transition: background-color 0.35s ease, color 0.35s ease;
     }
-    .reveal-on-scroll.is-visible {
+
+    h1, h2, h3 {
+      font-family: var(--font-sans);
+      font-weight: 700;
+      line-height: 1.35;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      object-fit: cover;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* =========================================
+       3. 互動功能：閱讀進度條 & 回到頂端按鈕
+       ========================================= */
+    .reading-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 4px;
+      background: linear-gradient(90deg, var(--secondary), var(--primary));
+      z-index: 1100;
+      transition: width 0.1s ease-out;
+    }
+
+    .back-to-top {
+      position: fixed;
+      right: 24px;
+      bottom: 24px;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background-color: var(--primary);
+      color: #FFFFFF;
+      border: none;
+      font-size: 1.25rem;
+      cursor: pointer;
+      box-shadow: var(--shadow-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(15px);
+      transition: var(--transition);
+      z-index: 990;
+    }
+
+    .back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .back-to-top:hover {
+      background-color: var(--primary-hover);
+      transform: translateY(-3px);
+    }
+
+    /* =========================================
+       4. 導覽列 (Header & 漢堡選單)
+       ========================================= */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background-color: rgba(250, 246, 240, 0.88);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-color);
+      transition: background-color 0.35s ease;
+    }
+
+    [data-theme="dark"] header {
+      background-color: rgba(30, 24, 21, 0.88);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 70px;
+    }
+
+    .brand-logo {
+      font-family: var(--font-sans);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .brand-dot {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: var(--primary);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      padding: 6px 4px;
+      position: relative;
+      transition: var(--transition);
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0%;
+      height: 2px;
+      background-color: var(--primary);
+      transition: width 0.25s ease;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .theme-toggle, .menu-toggle {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      border: 1px solid var(--border-color);
+      background-color: var(--bg-surface);
+      color: var(--text-primary);
+      font-size: 1.15rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition);
+    }
+
+    .theme-toggle:hover, .menu-toggle:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    .menu-toggle {
+      display: none;
+    }
+
+    /* =========================================
+       5. 開場 Hero 便當格 (Bento Grid)
+       ========================================= */
+    .hero-section {
+      padding: 40px 0 32px;
+    }
+
+    .bento-hero {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 20px;
+    }
+
+    .bento-card {
+      background-color: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+
+    .bento-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+    }
+
+    /* 主視覺大卡 (占 8 欄) */
+    .hero-main-card {
+      grid-column: span 8;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background: linear-gradient(135deg, var(--bg-surface) 0%, var(--bg-accent-tint) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .location-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: var(--radius-pill);
+      background-color: var(--bg-soft);
+      color: var(--secondary);
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+
+    .typing-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 16px;
+      border-radius: var(--radius-pill);
+      background-color: var(--primary);
+      color: #FFFFFF;
+      font-size: 0.95rem;
+      font-weight: 500;
+      min-height: 36px;
+    }
+
+    .typing-cursor {
+      display: inline-block;
+      width: 2px;
+      height: 1em;
+      background-color: #FFFFFF;
+      animation: blink 0.8s infinite;
+    }
+
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      51%, 100% { opacity: 0; }
+    }
+
+    .hero-main-card h1 {
+      font-size: clamp(2rem, 4vw, 2.75rem);
+      color: var(--text-primary);
+      margin-bottom: 8px;
+    }
+
+    .hero-role {
+      font-size: 1.125rem;
+      font-weight: 500;
+      color: var(--secondary);
+      margin-bottom: 16px;
+    }
+
+    .hero-slogan {
+      font-family: var(--font-sans);
+      font-size: clamp(1.2rem, 2.2vw, 1.45rem);
+      font-weight: 700;
+      color: var(--primary);
+      background-color: var(--bg-surface);
+      border-left: 4px solid var(--primary);
+      padding: 14px 18px;
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      margin-bottom: 18px;
+    }
+
+    .hero-intro {
+      color: var(--text-secondary);
+      font-size: 1.05rem;
+      margin-bottom: 24px;
+    }
+
+    .hero-cta-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 13px 26px;
+      border-radius: var(--radius-pill);
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: var(--transition);
+      border: none;
+      min-height: 48px;
+    }
+
+    .btn-primary {
+      background-color: var(--primary);
+      color: #FFFFFF;
+      box-shadow: 0 6px 16px rgba(217, 119, 66, 0.28);
+    }
+
+    .btn-primary:hover {
+      background-color: var(--primary-hover);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      background-color: var(--bg-surface);
+      color: var(--text-primary);
+      border: 1.5px solid var(--border-color);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    /* 右側便當格組合 (占 4 欄) */
+    .hero-side-stack {
+      grid-column: span 4;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .photo-card {
+      padding: 16px;
+      text-align: center;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .avatar-frame {
+      width: 190px;
+      height: 190px;
+      border-radius: 50%;
+      padding: 6px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      margin-bottom: 14px;
+    }
+
+    .avatar-frame img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background-color: var(--bg-soft);
+    }
+
+    .photo-caption {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
+    .traits-card {
+      background-color: var(--bg-soft);
+      padding: 22px;
+    }
+
+    .traits-title {
+      font-size: 1rem;
+      color: var(--secondary);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .traits-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .trait-tag {
+      background-color: var(--bg-surface);
+      color: var(--text-primary);
+      border: 1px solid var(--border-color);
+      padding: 6px 14px;
+      border-radius: var(--radius-pill);
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+
+    /* 橫幅情境圖卡片 (全寬 12 欄) */
+    .hero-banner-card {
+      grid-column: span 12;
+      padding: 0;
+      overflow: hidden;
+      height: 220px;
+      position: relative;
+    }
+
+    .hero-banner-card img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .hero-banner-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, rgba(67, 50, 39, 0.72), rgba(67, 50, 39, 0.2));
+      display: flex;
+      align-items: center;
+      padding: 28px 36px;
+      color: #FFF9F2;
+    }
+
+    .hero-banner-overlay p {
+      font-family: var(--font-sans);
+      font-weight: 500;
+      font-size: clamp(1.1rem, 2vw, 1.35rem);
+      max-width: 640px;
+    }
+
+    /* =========================================
+       6. 共用區塊結構
+       ========================================= */
+    section {
+      padding: 64px 0;
+    }
+
+    section.section-alt {
+      background-color: rgba(243, 234, 224, 0.55);
+      border-top: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    [data-theme="dark"] section.section-alt {
+      background-color: rgba(53, 43, 37, 0.45);
+    }
+
+    .section-header {
+      margin-bottom: 36px;
+    }
+
+    .section-eyebrow {
+      display: inline-block;
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: var(--primary);
+      margin-bottom: 6px;
+    }
+
+    .section-title {
+      font-size: clamp(1.65rem, 3vw, 2.1rem);
+      color: var(--text-primary);
+      margin-bottom: 8px;
+    }
+
+    .section-subtitle {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+    }
+
+    /* =========================================
+       7. 關於我 (大字引言 + 左右分欄 + 便當小卡)
+       ========================================= */
+    .quote-banner {
+      background-color: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 28px 32px;
+      margin-bottom: 28px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .quote-mark {
+      font-family: var(--font-sans);
+      font-size: 3rem;
+      font-weight: 700;
+      line-height: 1;
+      color: var(--primary);
+      opacity: 0.45;
+      margin-bottom: 4px;
+    }
+
+    .quote-text {
+      font-family: var(--font-sans);
+      font-size: clamp(1.125rem, 2vw, 1.35rem);
+      color: var(--text-primary);
+      font-weight: 500;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 5fr 7fr;
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .about-photo-box {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-sm);
+      background-color: var(--bg-surface);
+      min-height: 360px;
+    }
+
+    .about-photo-box img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .about-content-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .about-story-card p {
+      color: var(--text-secondary);
+      margin-bottom: 14px;
+      font-size: 1.02rem;
+    }
+
+    .about-story-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .about-mini-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .mini-info-card {
+      background-color: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 20px;
+    }
+
+    .mini-info-card h3 {
+      font-size: 1.05rem;
+      color: var(--secondary);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .mini-info-card p {
+      font-size: 0.98rem;
+      color: var(--text-secondary);
+    }
+
+    /* =========================================
+       8. 專長技能 (技能長條卡片)
+       ========================================= */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .skill-card {
+      background-color: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .skill-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+    }
+
+    .skill-name {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .skill-level-badge {
+      font-size: 0.88rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: var(--radius-pill);
+      background-color: var(--bg-accent-tint);
+      color: var(--primary);
+    }
+
+    .skill-bar-track {
+      width: 100%;
+      height: 10px;
+      background-color: var(--bg-soft);
+      border-radius: var(--radius-pill);
+      overflow: hidden;
+      margin-bottom: 14px;
+    }
+
+    .skill-bar-fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, var(--secondary), var(--primary));
+      border-radius: var(--radius-pill);
+      transition: width 1.1s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .skill-desc {
+      font-size: 0.98rem;
+      color: var(--text-secondary);
+    }
+
+    /* =========================================
+       9. 經歷 (時間軸)
+       ========================================= */
+    .timeline {
+      position: relative;
+      padding-left: 28px;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 7px;
+      top: 8px;
+      bottom: 8px;
+      width: 3px;
+      background-color: var(--border-color);
+      border-radius: 3px;
+    }
+
+    .timeline-item {
+      position: relative;
+      background-color: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 24px 28px;
+      margin-bottom: 22px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .timeline-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: -28px;
+      top: 28px;
+      width: 17px;
+      height: 17px;
+      border-radius: 50%;
+      background-color: var(--primary);
+      border: 4px solid var(--bg-base);
+      box-shadow: 0 0 0 2px var(--primary);
+    }
+
+    .timeline-item.featured {
+      border-left: 5px solid var(--primary);
+    }
+
+    .timeline-date {
+      display: inline-block;
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--primary);
+      background-color: var(--bg-accent-tint);
+      padding: 4px 12px;
+      border-radius: var(--radius-pill);
+      margin-bottom: 8px;
+    }
+
+    .timeline-role {
+      font-size: 1.2rem;
+      color: var(--text-primary);
+      margin-bottom: 10px;
+    }
+
+    .timeline-text {
+      color: var(--text-secondary);
+      font-size: 1rem;
+    }
+
+    .timeline-list {
+      padding-left: 20px;
+      color: var(--text-secondary);
+      font-size: 1rem;
+    }
+
+    .timeline-list li {
+      margin-bottom: 6px;
+    }
+
+    /* =========================================
+       10. 興趣與生活 (照片牆)
+       ========================================= */
+    .life-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .life-card {
+      background-color: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+
+    .life-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .life-img-wrap {
+      height: 210px;
+      overflow: hidden;
+    }
+
+    .life-img-wrap img {
+      width: 100%;
+      height: 100%;
+      transition: transform 0.5s ease;
+    }
+
+    .life-card:hover .life-img-wrap img {
+      transform: scale(1.05);
+    }
+
+    .life-body {
+      padding: 20px 22px;
+    }
+
+    .life-title {
+      font-size: 1.15rem;
+      color: var(--text-primary);
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .life-desc {
+      font-size: 0.98rem;
+      color: var(--text-secondary);
+    }
+
+    /* =========================================
+       11. 專業知識區 (預留規劃)
+       ========================================= */
+    .knowledge-placeholder {
+      background-color: var(--bg-surface);
+      border: 1.5px dashed var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 36px 28px;
+      text-align: center;
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    .knowledge-icon {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+    }
+
+    .knowledge-placeholder h3 {
+      font-size: 1.25rem;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+    }
+
+    .knowledge-placeholder p {
+      color: var(--text-secondary);
+      font-size: 1rem;
+    }
+
+    /* =========================================
+       12. 聯絡區塊 (滿版暖色卡片) & 頁尾
+       ========================================= */
+    .contact-card {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+      color: #FFFFFF;
+      border-radius: var(--radius-lg);
+      padding: 48px 32px;
+      text-align: center;
+      box-shadow: var(--shadow-md);
+    }
+
+    .contact-card h2 {
+      font-size: clamp(1.65rem, 3vw, 2.2rem);
+      margin-bottom: 14px;
+    }
+
+    .contact-card p {
+      font-size: 1.08rem;
+      max-width: 600px;
+      margin: 0 auto 28px;
+      opacity: 0.95;
+    }
+
+    .btn-white {
+      background-color: #FFFFFF;
+      color: var(--secondary);
+      padding: 15px 32px;
+      border-radius: var(--radius-pill);
+      font-size: 1.05rem;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      transition: var(--transition);
+      min-height: 52px;
+    }
+
+    .btn-white:hover {
+      transform: translateY(-2px);
+      background-color: #FFF9F2;
+    }
+
+    footer {
+      padding: 32px 0;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      border-top: 1px solid var(--border-color);
+    }
+
+    /* =========================================
+       13. 捲動淡入動畫 (Scroll Reveal)
+       ========================================= */
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
+    }
+
+    .reveal.is-visible {
       opacity: 1;
       transform: translateY(0);
     }
 
-    /* 互動功能 2：技能長條動態伸展 */
-    .skill-bar-fill {
-      width: 0%;
-      transition: width 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+    /* =========================================
+       14. RWD 響應式設計 (平板 & 手機 375px)
+       ========================================= */
+    @media (max-width: 900px) {
+      .hero-main-card {
+        grid-column: span 12;
+      }
+      .hero-side-stack {
+        grid-column: span 12;
+        flex-direction: row;
+      }
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+      .about-photo-box {
+        min-height: 280px;
+        max-height: 360px;
+      }
+      .skills-grid, .life-grid {
+        grid-template-columns: 1fr;
+      }
     }
 
-    /* 便當格卡片微互動 */
-    .bento-card {
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .bento-card:hover {
-      transform: translateY(-4px);
+    @media (max-width: 680px) {
+      .menu-toggle {
+        display: flex;
+      }
+
+      .nav-links {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background-color: var(--bg-surface);
+        border-bottom: 1px solid var(--border-color);
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 12px 20px 20px;
+        box-shadow: var(--shadow-md);
+        display: none;
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links li a {
+        display: block;
+        padding: 12px 8px;
+        font-size: 1.05rem;
+        border-bottom: 1px solid var(--border-color);
+      }
+
+      .nav-links li:last-child a {
+        border-bottom: none;
+      }
+
+      .hero-side-stack {
+        flex-direction: column;
+      }
+
+      .hero-banner-card {
+        height: 190px;
+      }
+
+      .hero-banner-overlay {
+        padding: 20px;
+      }
+
+      .about-mini-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .bento-card {
+        padding: 22px 20px;
+      }
+
+      .contact-card {
+        padding: 36px 20px;
+      }
+
+      .btn-white {
+        width: 100%;
+        justify-content: center;
+        font-size: 0.98rem;
+        padding: 14px 16px;
+        word-break: break-all;
+      }
     }
   </style>
 </head>
-<body class="font-sans antialiased selection:bg-warmOrange selection:text-white">
+<body>
+  <!-- 閱讀進度條 -->
+  <div class="reading-progress" id="readingProgress" aria-hidden="true"></div>
 
-  <!-- ==================== 導覽列 Header ==================== -->
-  <header class="sticky top-0 z-40 bg-warmBg/90 backdrop-blur-md border-b border-warmBorder">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-16 sm:h-20">
-        <!-- 網站名稱 Logo -->
-        <a href="#top" class="flex items-center gap-2.5 group focus:outline-none">
-          <span class="px-3 h-10 rounded-2xl bg-warmOrange text-white font-round font-black text-lg flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform">
-            巧妮
-          </span>
-          <div class="flex flex-col">
-            <span class="font-round font-bold text-lg text-warmCoffee leading-tight">巧妮的暖心筆記</span>
-            <span class="text-xs text-warmMocha">教保督導・特教實務</span>
-          </div>
-        </a>
+  <!-- 導覽列 -->
+  <header>
+    <div class="container nav-inner">
+      <a href="#" class="brand-logo">
+        <span class="brand-dot" aria-hidden="true"></span>
+        <span>鄭巧妮 Ni</span>
+      </a>
 
-        <!-- 桌面版導覽選單 -->
-        <nav class="hidden md:flex items-center gap-1 lg:gap-2" aria-label="主導覽選單">
-          <a href="#about" class="px-3 py-2 rounded-2xl text-warmCoffee hover:bg-warmOrangeLight hover:text-warmOrange font-medium transition-colors">關於我</a>
-          <a href="#skills" class="px-3 py-2 rounded-2xl text-warmCoffee hover:bg-warmOrangeLight hover:text-warmOrange font-medium transition-colors">專長技能</a>
-          <a href="#experience" class="px-3 py-2 rounded-2xl text-warmCoffee hover:bg-warmOrangeLight hover:text-warmOrange font-medium transition-colors">經歷</a>
-          <a href="#services" class="px-3 py-2 rounded-2xl text-warmCoffee hover:bg-warmOrangeLight hover:text-warmOrange font-medium transition-colors">服務項目</a>
-          <a href="#certifications" class="px-3 py-2 rounded-2xl text-warmCoffee hover:bg-warmOrangeLight hover:text-warmOrange font-medium transition-colors">證照資格</a>
-          <a href="#lifestyle" class="px-3 py-2 rounded-2xl text-warmCoffee hover:bg-warmOrangeLight hover:text-warmOrange font-medium transition-colors">興趣生活</a>
-          <a href="#contact" class="ml-2 px-5 py-2.5 rounded-full bg-warmOrange text-white font-round font-bold shadow-sm hover:bg-warmCoffee transition-colors">
-            預約服務
-          </a>
-        </nav>
+      <nav aria-label="主選單">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#about">關於我</a></li>
+          <li><a href="#skills">專長技能</a></li>
+          <li><a href="#experience">經歷</a></li>
+          <li><a href="#life">興趣與生活</a></li>
+          <li><a href="#knowledge">專業知識</a></li>
+          <li><a href="#contact">聯絡我</a></li>
+        </ul>
+      </nav>
 
-        <!-- 手機版漢堡選單按鈕 -->
-        <button id="mobile-menu-btn" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="開啟選單"
-          class="md:hidden p-3 rounded-2xl text-warmCoffee bg-warmApricot hover:bg-warmOrangeLight focus:outline-none">
-          <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-          <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M6 18L18 6M6 6l12 12" />
-          </svg>
+      <div class="nav-actions">
+        <button type="button" class="theme-toggle" id="themeToggle" aria-label="切換深淺色模式" title="切換深淺色模式">
+          🌙
+        </button>
+        <button type="button" class="menu-toggle" id="menuToggle" aria-label="開啟選單" aria-expanded="false">
+          ☰
         </button>
       </div>
     </div>
-
-    <!-- 手機版展開選單 -->
-    <div id="mobile-menu" class="hidden md:hidden bg-warmBg border-b border-warmBorder px-4 pt-2 pb-6 space-y-2 shadow-lg">
-      <a href="#about" class="mobile-nav-link block px-4 py-3 rounded-2xl text-base font-medium text-warmCoffee hover:bg-warmOrangeLight">🌿 關於我</a>
-      <a href="#skills" class="mobile-nav-link block px-4 py-3 rounded-2xl text-base font-medium text-warmCoffee hover:bg-warmOrangeLight">✨ 專長技能</a>
-      <a href="#experience" class="mobile-nav-link block px-4 py-3 rounded-2xl text-base font-medium text-warmCoffee hover:bg-warmOrangeLight">👣 經歷時間軸</a>
-      <a href="#services" class="mobile-nav-link block px-4 py-3 rounded-2xl text-base font-medium text-warmCoffee hover:bg-warmOrangeLight">🤝 服務項目</a>
-      <a href="#certifications" class="mobile-nav-link block px-4 py-3 rounded-2xl text-base font-medium text-warmCoffee hover:bg-warmOrangeLight">🏅 證照與資格</a>
-      <a href="#lifestyle" class="mobile-nav-link block px-4 py-3 rounded-2xl text-base font-medium text-warmCoffee hover:bg-warmOrangeLight">☀️ 興趣與生活</a>
-      <a href="#contact" class="mobile-nav-link block text-center mt-3 px-5 py-3.5 rounded-full bg-warmOrange text-white font-round font-bold text-base shadow-sm">
-        💌 預約或詢問服務
-      </a>
-    </div>
   </header>
 
-  <main id="top">
-
-    <!-- ==================== 1. 開場 Hero（Bento Grid 便當格設計） ==================== -->
-    <section class="py-8 sm:py-12 lg:py-16 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-6">
-        
-        <!-- 左上主卡片（佔 7 欄）：姓名、身分、主標語、簡介、行動按鈕 -->
-        <div class="lg:col-span-7 bg-warmCard rounded-3xl p-6 sm:p-9 lg:p-10 shadow-bento border border-warmBorder flex flex-col justify-between relative overflow-hidden">
-          <!-- 背景柔和裝飾圖 -->
-          <div class="absolute -right-12 -top-12 w-48 h-48 rounded-full bg-warmOrangeLight/80 pointer-events-none"></div>
-          
-          <div class="relative z-10">
-            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-warmOrangeLight text-warmOrange font-round font-bold text-sm sm:text-base mb-5">
-              <span>📍 新竹市</span>
-              <span>・</span>
-              <span>身心障礙機構教保督導</span>
-            </div>
-
-            <!-- 全站唯一 H1 -->
-            <h1 class="font-round font-black text-4xl sm:text-5xl lg:text-6xl text-warmCoffee tracking-tight mb-4">
-              巧妮
-            </h1>
-
-            <p class="font-round font-bold text-xl sm:text-2xl lg:text-[26px] text-warmOrange leading-snug mb-5">
-              用特教專業與真誠傾聽，陪伴每個獨特的生命安心前行。
-            </p>
-
-            <p class="text-base sm:text-lg text-warmMocha leading-relaxed mb-8">
-              國北教大特教系畢業並取得教師證，累積新竹市 5～6 年多元實務與教保督導經驗。兼具敏銳觀察、共情力與抗壓性，擅長文書與 Canva 美宣設計，致力於用專業成就每一份助人價值。
-            </p>
-          </div>
-
-          <div class="relative z-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
-            <a href="#contact" class="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-full bg-warmOrange text-white font-round font-bold text-base sm:text-lg shadow-md hover:bg-warmCoffee transition-all">
-              <span>💌 預約或詢問服務</span>
-            </a>
-            <a href="#services" class="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-full bg-warmApricot text-warmCoffee font-round font-bold text-base sm:text-lg hover:bg-warmBorder transition-colors">
-              <span>了解服務項目 ↓</span>
-            </a>
-          </div>
-        </div>
-
-        <!-- 右側便當格組合（佔 5 欄） -->
-        <div class="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-5 sm:gap-6">
-          
-          <!-- 個人照便當卡 -->
-          <div class="bento-card bg-warmCard rounded-3xl p-4 shadow-bento border border-warmBorder flex flex-col items-center justify-center relative overflow-hidden">
-            <div class="w-full h-64 sm:h-72 rounded-2xl overflow-hidden bg-warmApricot relative">
-              <img 
-                src="photo.jpg" 
-                alt="巧妮 個人照" 
-                loading="lazy"
-                style="object-fit: cover; object-position: center 20%;"
-                onerror="this.onerror=null; this.src='https://picsum.photos/seed/ni-portrait/600/600';"
-                class="w-full h-full"
-              />
-            </div>
-            <div class="w-full pt-3 px-2 flex items-center justify-between text-warmCoffee">
-              <span class="font-round font-bold text-base">真誠・可靠・善解人意</span>
-              <span class="text-xl" aria-hidden="true">🌻</span>
-            </div>
-          </div>
-
-          <!-- 核心關鍵字便當卡 -->
-          <div class="bento-card bg-warmApricot rounded-3xl p-6 shadow-bento border border-warmBorder flex flex-col justify-center">
-            <p class="font-round font-bold text-sm text-warmMocha uppercase tracking-wider mb-3">核心關鍵字</p>
-            <div class="flex flex-wrap gap-2.5">
-              <span class="px-4 py-2 rounded-2xl bg-white text-warmCoffee font-round font-bold text-base shadow-sm border border-warmBorder">
-                #特殊教育
-              </span>
-              <span class="px-4 py-2 rounded-2xl bg-white text-warmCoffee font-round font-bold text-base shadow-sm border border-warmBorder">
-                #身障機構
-              </span>
-              <span class="px-4 py-2 rounded-2xl bg-warmOrange text-white font-round font-bold text-base shadow-sm">
-                #問題解決
-              </span>
-            </div>
-          </div>
-        </div>
-
-        <!-- 底部滿寬座右銘便當卡（佔 12 欄） -->
-        <div class="lg:col-span-12 bento-card bg-gradient-to-r from-[#F9ECE0] via-[#FFF6EC] to-[#F9ECE0] rounded-3xl p-6 sm:p-8 shadow-bento border border-warmBorder flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6">
-          <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-warmOrange text-white flex items-center justify-center text-2xl shrink-0 shadow-sm" aria-hidden="true">
-            ✨
-          </div>
-          <blockquote class="font-round font-bold text-base sm:text-xl text-warmCoffee leading-relaxed">
-            「一個人的價值，在於他貢獻了什麼，而不在於他能得到什麼；不要試圖去做一個成功的人，要努力成為一個有價值的人。」
-          </blockquote>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ==================== 2. 關於我（左右分欄＋三張理念便當卡） ==================== -->
-    <section id="about" class="py-14 sm:py-20 bg-warmApricot/70 border-y border-warmBorder">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 reveal-on-scroll">
-        
-        <div class="text-center max-w-2xl mx-auto mb-10 sm:mb-14">
-          <span class="inline-block px-4 py-1 rounded-full bg-white text-warmOrange font-round font-bold text-sm mb-3 shadow-sm">ABOUT ME</span>
-          <h2 class="font-round font-black text-3xl sm:text-4xl text-warmCoffee">關於我：用傾聽與專業陪伴成長</h2>
-        </div>
-
-        <!-- 上半部：左右分欄 -->
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mb-8 sm:mb-10">
-          <!-- 左側配圖 -->
-          <div class="lg:col-span-5">
-            <div class="rounded-3xl overflow-hidden shadow-bento border-4 border-white bg-warmCard aspect-[4/3]">
-              <img 
-                src="about.jpg" 
-                alt="巧妮的特殊教育與教保工作日常" 
-                loading="lazy"
-                style="object-fit: cover;"
-                onerror="this.onerror=null; this.src='https://picsum.photos/seed/teaching-care/800/600';"
-                class="w-full h-full"
-              />
-            </div>
-          </div>
-
-          <!-- 右側故事敘述 -->
-          <div class="lg:col-span-7 bg-white rounded-3xl p-6 sm:p-9 shadow-bento border border-warmBorder space-y-4">
-            <h3 class="font-round font-bold text-xl sm:text-2xl text-warmCoffee flex items-center gap-2">
-              <span class="text-2xl">🌱</span> 從特教系走進第一線的助人旅程
-            </h3>
-            <p class="text-base sm:text-lg text-warmMocha leading-relaxed">
-              我畢業於<strong class="text-warmCoffee">國立臺北教育大學特殊教育學系</strong>，並順利通過教育實習取得<strong class="text-warmCoffee">特殊教育教師證</strong>。在學期間，我也主動修讀多項心理諮商輔導相關課程，為理解他人內在需求打下深厚的專業基礎。
-            </p>
-            <p class="text-base sm:text-lg text-warmMocha leading-relaxed">
-              畢業後，我走進日間照顧機構擔任教保員，在第一線陪伴身心障礙成人；如今擔任<strong class="text-warmCoffee">身心障礙機構教保督導</strong>，累積新竹市 5～6 年多元實務歷練。我始終相信，每個人都有獨特的亮點，而我的角色就是陪伴並支持他們找到發光的位置。
-            </p>
-          </div>
-        </div>
-
-        <!-- 下半部：三張做事原則便當卡 -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
-          <div class="bento-card bg-white rounded-3xl p-6 sm:p-7 shadow-bento border border-warmBorder">
-            <div class="w-12 h-12 rounded-2xl bg-warmOrangeLight text-warmOrange flex items-center justify-center text-2xl mb-4">
-              👂
-            </div>
-            <h3 class="font-round font-bold text-xl text-warmCoffee mb-2">敏銳觀察與傾聽</h3>
-            <p class="text-base text-warmMocha leading-relaxed">
-              我是一個觀察敏銳、心思細膩的人，善於引導與傾聽，發掘他人的真實需求與潛在能力。
-            </p>
-          </div>
-
-          <div class="bento-card bg-white rounded-3xl p-6 sm:p-7 shadow-bento border border-warmBorder">
-            <div class="w-12 h-12 rounded-2xl bg-warmOrangeLight text-warmOrange flex items-center justify-center text-2xl mb-4">
-              💛
-            </div>
-            <h3 class="font-round font-bold text-xl text-warmCoffee mb-2">共情力與注重細節</h3>
-            <p class="text-base text-warmMocha leading-relaxed">
-              具備豐富的抽象情感及共情能力，注重細節；對於喜愛的事物會專注深入探究，盡力做到最好。
-            </p>
-          </div>
-
-          <div class="bento-card bg-white rounded-3xl p-6 sm:p-7 shadow-bento border border-warmBorder">
-            <div class="w-12 h-12 rounded-2xl bg-warmOrangeLight text-warmOrange flex items-center justify-center text-2xl mb-4">
-              🚀
-            </div>
-            <h3 class="font-round font-bold text-xl text-warmCoffee mb-2">突破限制解決問題</h3>
-            <p class="text-base text-warmMocha leading-relaxed">
-              喜歡挑戰、突破限制解決問題，具備高抗壓性及環境適應力，熱衷學習新環境所需具備的能力。
-            </p>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ==================== 3. 專長技能（卡片格＋互動技能長條） ==================== -->
-    <section id="skills" class="py-14 sm:py-20 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 reveal-on-scroll">
-      <div class="text-center max-w-2xl mx-auto mb-10 sm:mb-14">
-        <span class="inline-block px-4 py-1 rounded-full bg-warmOrangeLight text-warmOrange font-round font-bold text-sm mb-3">SKILLS & STRENGTHS</span>
-        <h2 class="font-round font-black text-3xl sm:text-4xl text-warmCoffee">專長技能</h2>
-        <p class="text-base sm:text-lg text-warmMocha mt-3">結合特殊教育專業、心理輔導敏銳度與視覺美宣設計的多元實力</p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        
-        <!-- 技能 1 -->
-        <div class="bento-card bg-white rounded-3xl p-6 sm:p-8 shadow-bento border border-warmBorder">
-          <div class="flex items-center justify-between mb-3">
-            <div class="flex items-center gap-3">
-              <span class="text-2xl">🧩</span>
-              <h3 class="font-round font-bold text-xl text-warmCoffee">特殊教育與教保實務</h3>
-            </div>
-            <span class="px-3.5 py-1 rounded-full bg-warmOrange text-white font-round font-bold text-sm">專精</span>
-          </div>
-          <div class="w-full h-3.5 bg-warmApricot rounded-full overflow-hidden mb-4">
-            <div class="skill-bar-fill h-full bg-warmOrange rounded-full" data-width="95%"></div>
-          </div>
-          <p class="text-base text-warmMocha leading-relaxed">
-            具備特教教師證與新竹市 5～6 年實務歷練，熟悉身心障礙兒童與成人的支持服務與個別化引導。
-          </p>
-        </div>
-
-        <!-- 技能 2 -->
-        <div class="bento-card bg-white rounded-3xl p-6 sm:p-8 shadow-bento border border-warmBorder">
-          <div class="flex items-center justify-between mb-3">
-            <div class="flex items-center gap-3">
-              <span class="text-2xl">💬</span>
-              <h3 class="font-round font-bold text-xl text-warmCoffee">引導傾聽與心理輔導</h3>
-            </div>
-            <span class="px-3.5 py-1 rounded-full bg-warmHoney text-white font-round font-bold text-sm">熟練</span>
-          </div>
-          <div class="w-full h-3.5 bg-warmApricot rounded-full overflow-hidden mb-4">
-            <div class="skill-bar-fill h-full bg-warmHoney rounded-full" data-width="90%"></div>
-          </div>
-          <p class="text-base text-warmMocha leading-relaxed">
-            大學期間修讀多項心理諮商輔導相關課程，善於敏銳覺察他人需求，具備高度共情與跨團隊溝通協調力。
-          </p>
-        </div>
-
-        <!-- 技能 3 -->
-        <div class="bento-card bg-white rounded-3xl p-6 sm:p-8 shadow-bento border border-warmBorder">
-          <div class="flex items-center justify-between mb-3">
-            <div class="flex items-center gap-3">
-              <span class="text-2xl">🎨</span>
-              <h3 class="font-round font-bold text-xl text-warmCoffee">Canva 視覺美宣設計</h3>
-            </div>
-            <span class="px-3.5 py-1 rounded-full bg-warmHoney text-white font-round font-bold text-sm">熟練</span>
-          </div>
-          <div class="w-full h-3.5 bg-warmApricot rounded-full overflow-hidden mb-4">
-            <div class="skill-bar-fill h-full bg-warmHoney rounded-full" data-width="88%"></div>
-          </div>
-          <p class="text-base text-warmMocha leading-relaxed">
-            熟練運用 Canva 製作溫暖吸睛的美宣海報與清晰易懂的報告簡報，讓專業資訊傳遞更有溫度。
-          </p>
-        </div>
-
-        <!-- 技能 4 -->
-        <div class="bento-card bg-white rounded-3xl p-6 sm:p-8 shadow-bento border border-warmBorder">
-          <div class="flex items-center justify-between mb-3">
-            <div class="flex items-center gap-3">
-              <span class="text-2xl">📋</span>
-              <h3 class="font-round font-bold text-xl text-warmCoffee">多工應變與文書行政</h3>
-            </div>
-            <span class="px-3.5 py-1 rounded-full bg-warmHoney text-white font-round font-bold text-sm">熟練</span>
-          </div>
-          <div class="w-full h-3.5 bg-warmApricot rounded-full overflow-hidden mb-4">
-            <div class="skill-bar-fill h-full bg-warmHoney rounded-full" data-width="88%"></div>
-          </div>
-          <p class="text-base text-warmMocha leading-relaxed">
-            擅長使用文書軟體處理行政規劃，並擁有多元服務業與教學現場歷練，具備高抗壓性與環境適應力。
-          </p>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ==================== 區塊間圖片橫幅 ==================== -->
-    <div class="relative w-full h-48 sm:h-56 overflow-hidden my-4">
-      <img 
-        src="hero.jpg" 
-        alt="溫暖柔和的陪伴風景橫幅" 
-        loading="lazy"
-        style="object-fit: cover;"
-        onerror="this.onerror=null; this.src='https://picsum.photos/seed/warm-sunshine/1200/400';"
-        class="w-full h-full"
-      />
-      <div class="absolute inset-0 bg-warmCoffee/55 backdrop-blur-[2px] flex items-center justify-center px-4 text-center">
-        <p class="font-round font-bold text-xl sm:text-2xl lg:text-3xl text-white max-w-3xl leading-relaxed drop-shadow">
-          「每一步走過的累積，都化作理解他人與解決問題的溫柔力量。」
-        </p>
-      </div>
-    </div>
-
-    <!-- ==================== 4. 經歷（故事時間軸） ==================== -->
-    <section id="experience" class="py-14 sm:py-20 bg-warmApricot/60 border-b border-warmBorder">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 reveal-on-scroll">
-        
-        <div class="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
-          <span class="inline-block px-4 py-1 rounded-full bg-white text-warmOrange font-round font-bold text-sm mb-3 shadow-sm">EXPERIENCE</span>
-          <h2 class="font-round font-black text-3xl sm:text-4xl text-warmCoffee">經歷時間軸</h2>
-          <p class="text-base sm:text-lg text-warmMocha mt-3">新竹市 5～6 年工作歷練與教育現場的紮實足跡</p>
-        </div>
-
-        <!-- 垂直時間軸容器 -->
-        <div class="relative border-l-4 border-warmOrange/40 ml-4 sm:ml-6 space-y-8">
-          
-          <!-- 經歷 1：現任 -->
-          <div class="relative pl-7 sm:pl-10">
-            <span class="absolute -left-[14px] top-1.5 w-6 h-6 rounded-full bg-warmOrange border-4 border-white shadow"></span>
-            <div class="bento-card bg-white rounded-3xl p-6 sm:p-7 shadow-bento border border-warmBorder">
-              <span class="inline-block px-3.5 py-1 rounded-full bg-warmOrangeLight text-warmOrange font-round font-bold text-sm mb-2">
-                現任
-              </span>
-              <h3 class="font-round font-bold text-xl text-warmCoffee mb-2">身心障礙機構｜教保督導</h3>
-              <p class="text-base text-warmMocha leading-relaxed">
-                帶領與支持第一線教保團隊，統籌身心障礙者支持服務規劃、個案需求觀察與現場問題解決。
-              </p>
-            </div>
-          </div>
-
-          <!-- 經歷 2：日間照顧機構 -->
-          <div class="relative pl-7 sm:pl-10">
-            <span class="absolute -left-[14px] top-1.5 w-6 h-6 rounded-full bg-warmHoney border-4 border-white shadow"></span>
-            <div class="bento-card bg-white rounded-3xl p-6 sm:p-7 shadow-bento border border-warmBorder">
-              <span class="inline-block px-3.5 py-1 rounded-full bg-warmApricot text-warmMocha font-round font-bold text-sm mb-2">
-                大學畢業後
-              </span>
-              <h3 class="font-round font-bold text-xl text-warmCoffee mb-2">日間照顧機構｜教保員</h3>
-              <p class="text-base text-warmMocha leading-relaxed">
-                投入第一線教保服務，細心陪伴身心障礙成人日常訓練、生活自理與情緒支持。
-              </p>
-            </div>
-          </div>
-
-          <!-- 經歷 3：國小與才藝課照 -->
-          <div class="relative pl-7 sm:pl-10">
-            <span class="absolute -left-[14px] top-1.5 w-6 h-6 rounded-full bg-warmHoney border-4 border-white shadow"></span>
-            <div class="bento-card bg-white rounded-3xl p-6 sm:p-7 shadow-bento border border-warmBorder">
-              <span class="inline-block px-3.5 py-1 rounded-full bg-warmApricot text-warmMocha font-round font-bold text-sm mb-2">
-                2019年3月 － 2022年7月
-              </span>
-              <h3 class="font-round font-bold text-xl text-warmCoffee mb-2">國小教師／才藝老師、課後照顧班老師、家教老師</h3>
-              <p class="text-base text-warmMocha leading-relaxed">
-                負責課程規劃與執行、教導幼兒組裝操作動力積木，並耐心指導學童完成與檢查日常課業。
-              </p>
-            </div>
-          </div>
-
-          <!-- 經歷 4：多元餐飲服務 -->
-          <div class="relative pl-7 sm:pl-10">
-            <span class="absolute -left-[14px] top-1.5 w-6 h-6 rounded-full bg-warmHoney border-4 border-white shadow"></span>
-            <div class="bento-card bg-white rounded-3xl p-6 sm:p-7 shadow-bento border border-warmBorder">
-              <span class="inline-block px-3.5 py-1 rounded-full bg-warmApricot text-warmMocha font-round font-bold text-sm mb-2">
-                2018年9月 － 2024年6月
-              </span>
-              <h3 class="font-round font-bold text-xl text-warmCoffee mb-2">多元餐飲與門市服務人員</h3>
-              <p class="text-sm text-warmLatte font-medium mb-2">
-                三商餐飲股份有限公司（拿坡里門市店員）、涮涮鍋外場工讀生、居酒屋外場工讀生、搗飛豆花門市店員、宴會廳服務員
-              </p>
-              <p class="text-base text-warmMocha leading-relaxed">
-                負責開店閉店製料作業、顧客服務、精熟櫃台業務與 POS 機操作結帳，在快節奏環境中培養出極佳的抗壓性與人際應變力。
-              </p>
-            </div>
-          </div>
-
-          <!-- 經歷 5：大學學歷 -->
-          <div class="relative pl-7 sm:pl-10">
-            <span class="absolute -left-[14px] top-1.5 w-6 h-6 rounded-full bg-warmCoffee border-4 border-white shadow"></span>
-            <div class="bento-card bg-white rounded-3xl p-6 sm:p-7 shadow-bento border border-warmBorder">
-              <span class="inline-block px-3.5 py-1 rounded-full bg-warmApricot text-warmMocha font-round font-bold text-sm mb-2">
-                2018年 － 2022年
-              </span>
-              <h3 class="font-round font-bold text-xl text-warmCoffee mb-2">國立臺北教育大學｜特殊教育學系（大學畢業）</h3>
-              <p class="text-base text-warmMocha leading-relaxed">
-                修習特殊教育專業課程並通過實習取得教師證，同時修讀多項心理諮商輔導相關課程。
-              </p>
-            </div>
-          </div>
-
-          <!-- 經歷 6：高中社團 -->
-          <div class="relative pl-7 sm:pl-10">
-            <span class="absolute -left-[14px] top-1.5 w-6 h-6 rounded-full bg-warmCoffee border-4 border-white shadow"></span>
-            <div class="bento-card bg-white rounded-3xl p-6 sm:p-7 shadow-bento border border-warmBorder">
-              <span class="inline-block px-3.5 py-1 rounded-full bg-warmApricot text-warmMocha font-round font-bold text-sm mb-2">
-                2016年 － 2017年
-              </span>
-              <h3 class="font-round font-bold text-xl text-warmCoffee mb-2">新竹女中｜希望之旅社 第十四屆總務</h3>
-              <p class="text-base text-warmMocha leading-relaxed">
-                從社員成長為幹部，學習社團資源管理與行政統籌。
-              </p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ==================== 5. 服務項目（三欄便當卡片格） ==================== -->
-    <section id="services" class="py-14 sm:py-20 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 reveal-on-scroll">
-      <div class="text-center max-w-2xl mx-auto mb-10 sm:mb-14">
-        <span class="inline-block px-4 py-1 rounded-full bg-warmOrangeLight text-warmOrange font-round font-bold text-sm mb-3">SERVICES</span>
-        <h2 class="font-round font-black text-3xl sm:text-4xl text-warmCoffee">服務項目</h2>
-        <p class="text-base sm:text-lg text-warmMocha mt-3">以特教專業、細膩傾聽與設計美感，為你提供溫暖可靠的支持</p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
-        
-        <!-- 服務 1 -->
-        <div class="bento-card bg-white rounded-3xl p-7 sm:p-8 shadow-bento border border-warmBorder flex flex-col justify-between">
-          <div>
-            <div class="w-14 h-14 rounded-2xl bg-warmOrangeLight text-warmOrange flex items-center justify-center text-3xl mb-5">
-              🤝
-            </div>
-            <h3 class="font-round font-bold text-2xl text-warmCoffee mb-3">教保／特教實務諮詢</h3>
-            <p class="text-sm font-bold text-warmOrange mb-3">適合對象：身障服務單位、教保夥伴、有特教支持需求之家庭</p>
-            <p class="text-base text-warmMocha leading-relaxed mb-6">
-              結合身心障礙機構教保督導與日照第一線實務經驗，透過敏銳觀察與傾聽，協助梳理支持策略與現場問題解決。
-            </p>
-          </div>
-          <a href="#contact" data-service="教保／特教實務諮詢" class="service-inquiry-btn w-full inline-flex items-center justify-center px-5 py-3.5 rounded-2xl bg-warmApricot text-warmCoffee font-round font-bold text-base hover:bg-warmOrange hover:text-white transition-colors">
-            預約諮詢此服務 →
-          </a>
-        </div>
-
-        <!-- 服務 2 -->
-        <div class="bento-card bg-white rounded-3xl p-7 sm:p-8 shadow-bento border border-warmBorder flex flex-col justify-between">
-          <div>
-            <div class="w-14 h-14 rounded-2xl bg-warmOrangeLight text-warmOrange flex items-center justify-center text-3xl mb-5">
-              🧱
-            </div>
-            <h3 class="font-round font-bold text-2xl text-warmCoffee mb-3">兒童才藝與課業指導</h3>
-            <p class="text-sm font-bold text-warmOrange mb-3">適合對象：幼兒、國小學童及需要個別化學習陪伴的孩子</p>
-            <p class="text-base text-warmMocha leading-relaxed mb-6">
-              具備特教教師證及國小、課照、家教與幼兒動力積木教學經驗，依照孩子特質規劃課程，耐心陪伴課業與動手操作。
-            </p>
-          </div>
-          <a href="#contact" data-service="兒童才藝與課業指導" class="service-inquiry-btn w-full inline-flex items-center justify-center px-5 py-3.5 rounded-2xl bg-warmApricot text-warmCoffee font-round font-bold text-base hover:bg-warmOrange hover:text-white transition-colors">
-            預約諮詢此服務 →
-          </a>
-        </div>
-
-        <!-- 服務 3 -->
-        <div class="bento-card bg-white rounded-3xl p-7 sm:p-8 shadow-bento border border-warmBorder flex flex-col justify-between">
-          <div>
-            <div class="w-14 h-14 rounded-2xl bg-warmOrangeLight text-warmOrange flex items-center justify-center text-3xl mb-5">
-              🎨
-            </div>
-            <h3 class="font-round font-bold text-2xl text-warmCoffee mb-3">Canva 美宣海報設計</h3>
-            <p class="text-sm font-bold text-warmOrange mb-3">適合對象：教育單位、社福機構、活動主辦方及個人品牌</p>
-            <p class="text-base text-warmMocha leading-relaxed mb-6">
-              運用熟練的 Canva 視覺排版與文書整理能力，為你設計溫暖有親和力的活動美宣海報與條理清晰的報告簡報。
-            </p>
-          </div>
-          <a href="#contact" data-service="Canva 美宣海報設計" class="service-inquiry-btn w-full inline-flex items-center justify-center px-5 py-3.5 rounded-2xl bg-warmApricot text-warmCoffee font-round font-bold text-base hover:bg-warmOrange hover:text-white transition-colors">
-            預約諮詢此服務 →
-          </a>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ==================== 6. 證照與資格（精巧便當徽章卡） ==================== -->
-    <section id="certifications" class="py-12 sm:py-16 bg-warmApricot/60 border-y border-warmBorder">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 reveal-on-scroll">
-        <div class="text-center mb-8">
-          <span class="inline-block px-4 py-1 rounded-full bg-white text-warmOrange font-round font-bold text-sm mb-2 shadow-sm">CERTIFICATION</span>
-          <h2 class="font-round font-black text-3xl text-warmCoffee">專業證照與資格</h2>
-        </div>
-
-        <div class="bento-card bg-white rounded-3xl p-6 sm:p-8 shadow-bento border border-warmBorder flex flex-col sm:flex-row items-center justify-between gap-5 max-w-2xl mx-auto">
-          <div class="flex items-center gap-4 text-center sm:text-left flex-col sm:flex-row">
-            <div class="w-16 h-16 rounded-2xl bg-warmOrangeLight text-warmOrange flex items-center justify-center text-3xl shrink-0">
-              🏅
-            </div>
+  <main>
+    <!-- 開場 Hero 便當格 -->
+    <section class="hero-section" aria-label="個人簡介開場">
+      <div class="container">
+        <div class="bento-hero">
+          <!-- 左側大卡：核心介紹 -->
+          <div class="bento-card hero-main-card reveal">
             <div>
-              <h3 class="font-round font-bold text-xl sm:text-2xl text-warmCoffee">特殊教育教師證</h3>
-              <p class="text-base text-warmMocha mt-1">國立臺北教育大學特殊教育學系畢業，並通過教育實習取得</p>
+              <div class="hero-badge-row">
+                <span class="location-pill">🐚 新竹市</span>
+                <span class="typing-pill">
+                  <span>🌊</span>
+                  <span id="typingText">溫柔堅定</span>
+                  <span class="typing-cursor" aria-hidden="true"></span>
+                </span>
+              </div>
+
+              <h1>鄭巧妮 Ni</h1>
+              <p class="hero-role">身心障礙機構的教保督導，同時正在逐漸成為一位社會工作者</p>
+
+              <p class="hero-slogan">「溫柔而堅定地傾聽需求，用專業與細節守護每一份信任。」</p>
+
+              <p class="hero-intro">
+                在新竹服務，擁有特殊教育背景與豐富的身心障礙者陪伴經驗。我觀察敏銳、善於傾聽與共情，致力於用細膩的心思與系統化的專業，陪伴每一個獨特的生命穩步前行。
+              </p>
+            </div>
+
+            <div class="hero-cta-group">
+              <a href="#contact" class="btn btn-primary">🐚 預約或詢問服務</a>
+              <a href="#about" class="btn btn-outline">🌊 認識我的故事</a>
             </div>
           </div>
-          <span class="px-4 py-1.5 rounded-full bg-warmOrange text-white font-round font-bold text-sm shrink-0">
-            正式合格證書
-          </span>
+
+          <!-- 右側雙卡：個人照 + 特質標籤 -->
+          <div class="hero-side-stack">
+            <div class="bento-card photo-card reveal">
+              <div class="avatar-frame">
+                <img
+                  src="photo.jpg"
+                  alt="鄭巧妮 Ni 個人照片"
+                  loading="lazy"
+                  onerror="this.onerror=null; this.src='https://picsum.photos/seed/warmportrait/400/400';"
+                >
+              </div>
+              <p class="photo-caption">用真誠與細膩，傾聽每一個需要</p>
+            </div>
+
+            <div class="bento-card traits-card reveal">
+              <h2 class="traits-title">🐚 我的助人特質</h2>
+              <div class="traits-tags">
+                <span class="trait-tag">☀️ 真誠</span>
+                <span class="trait-tag">🤎 可靠</span>
+                <span class="trait-tag">🌊 善解人意</span>
+                <span class="trait-tag">🐚 溫柔堅定</span>
+                <span class="trait-tag">🔑 問題解決</span>
+                <span class="trait-tag">🧸 專業助人</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 下方橫幅情境圖 -->
+          <div class="bento-card hero-banner-card reveal">
+            <img
+              src="hero.jpg"
+              alt="溫暖日常與工作風景"
+              loading="lazy"
+              onerror="this.onerror=null; this.src='https://picsum.photos/seed/warmstudy/1200/400';"
+            >
+            <div class="hero-banner-overlay">
+              <p>「不要試圖去做一個成功的人，要努力成為一個有價值的人。」</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- ==================== 7. 興趣與生活（三格照片牆） ==================== -->
-    <section id="lifestyle" class="py-14 sm:py-20 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 reveal-on-scroll">
-      <div class="text-center max-w-2xl mx-auto mb-10 sm:mb-14">
-        <span class="inline-block px-4 py-1 rounded-full bg-warmOrangeLight text-warmOrange font-round font-bold text-sm mb-3">LIFE & HOBBIES</span>
-        <h2 class="font-round font-black text-3xl sm:text-4xl text-warmCoffee">興趣與生活</h2>
-        <p class="text-base sm:text-lg text-warmMocha mt-3">在助人工作之餘，透過熱愛的事物為生活充電</p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        
-        <!-- 興趣 1：唱歌 -->
-        <div class="bento-card bg-white rounded-3xl overflow-hidden shadow-bento border border-warmBorder flex flex-col">
-          <div class="h-56 overflow-hidden bg-warmApricot">
-            <img 
-              src="life1.jpg" 
-              alt="興趣與生活：唱歌" 
-              loading="lazy"
-              style="object-fit: cover;"
-              onerror="this.onerror=null; this.src='https://picsum.photos/seed/singing-mic/600/450';"
-              class="w-full h-full hover:scale-105 transition-transform duration-500"
-            />
-          </div>
-          <div class="p-6">
-            <h3 class="font-round font-bold text-xl text-warmCoffee flex items-center gap-2 mb-2">
-              <span>🎤</span> 唱歌
-            </h3>
-            <p class="text-base text-warmMocha">用歌聲抒發情感、療癒身心，唱出生活中的好心情。</p>
-          </div>
+    <!-- 區塊一：關於我 -->
+    <section id="about" class="section-alt">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow">ABOUT ME</span>
+          <h2 class="section-title">關於我：在特教與社工之間，練習成為有價值的人</h2>
         </div>
 
-        <!-- 興趣 2：電影 -->
-        <div class="bento-card bg-white rounded-3xl overflow-hidden shadow-bento border border-warmBorder flex flex-col">
-          <div class="h-56 overflow-hidden bg-warmApricot">
-            <img 
-              src="life2.jpg" 
-              alt="興趣與生活：電影" 
-              loading="lazy"
-              style="object-fit: cover;"
-              onerror="this.onerror=null; this.src='https://picsum.photos/seed/cinema-movie/600/450';"
-              class="w-full h-full hover:scale-105 transition-transform duration-500"
-            />
-          </div>
-          <div class="p-6">
-            <h3 class="font-round font-bold text-xl text-warmCoffee flex items-center gap-2 mb-2">
-              <span>🎬</span> 電影
-            </h3>
-            <p class="text-base text-warmMocha">在細膩的光影故事裡感受共情，體會不同的人生風景。</p>
-          </div>
-        </div>
-
-        <!-- 興趣 3：排球 -->
-        <div class="bento-card bg-white rounded-3xl overflow-hidden shadow-bento border border-warmBorder flex flex-col">
-          <div class="h-56 overflow-hidden bg-warmApricot">
-            <img 
-              src="life3.jpg" 
-              alt="興趣與生活：排球" 
-              loading="lazy"
-              style="object-fit: cover;"
-              onerror="this.onerror=null; this.src='https://picsum.photos/seed/volleyball-sport/600/450';"
-              class="w-full h-full hover:scale-105 transition-transform duration-500"
-            />
-          </div>
-          <div class="p-6">
-            <h3 class="font-round font-bold text-xl text-warmCoffee flex items-center gap-2 mb-2">
-              <span>🏐</span> 排球
-            </h3>
-            <p class="text-base text-warmMocha">享受在球場上專注投入、揮灑汗水與團隊合作的活力。</p>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ==================== 8. 聯絡方式（滿版暖色行動區塊） ==================== -->
-    <section id="contact" class="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto reveal-on-scroll">
-      <div class="bg-gradient-to-br from-warmOrange to-[#D96B2B] rounded-[2.2rem] p-8 sm:p-12 lg:p-16 text-white shadow-xl relative overflow-hidden">
-        <!-- 裝飾圓圈 -->
-        <div class="absolute -right-16 -bottom-16 w-64 h-64 rounded-full bg-white/10 pointer-events-none"></div>
-        <div class="absolute -left-10 -top-10 w-40 h-40 rounded-full bg-white/10 pointer-events-none"></div>
-
-        <div class="relative z-10 max-w-3xl mx-auto text-center">
-          <span class="inline-block px-4 py-1.5 rounded-full bg-white/20 text-white font-round font-bold text-sm mb-4">
-            CONTACT ME
-          </span>
-          <h2 class="font-round font-black text-3xl sm:text-4xl lg:text-5xl mb-5">
-            歡迎與我聯繫聊聊
-          </h2>
-          <p class="text-base sm:text-xl text-white/95 leading-relaxed mb-8">
-            如果你有<strong>教保／特教實務諮詢</strong>、<strong>兒童才藝與課業指導</strong>，或 <strong>Canva 美宣海報設計</strong>的需求，歡迎隨時寫信與我聯繫，我會真誠傾聽並盡快回覆你！
-          </p>
-
-          <!-- 顯示選中的服務提示（點擊上方服務卡片時出現） -->
-          <div id="selected-service-banner" class="hidden mb-6 inline-block px-5 py-2.5 rounded-2xl bg-white/20 backdrop-blur-sm text-white font-round font-bold text-base">
-            ✨ 你選擇了詢問：<span id="selected-service-name"></span>
-          </div>
-
-          <!-- Email 展示與操作按鈕 -->
-          <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a id="mailto-btn" href="mailto:he00781234@gmail.com?subject=【網站預約詢問】您好巧妮，我想洽詢服務"
-              class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full bg-white text-warmCoffee font-round font-black text-base sm:text-lg shadow-lg hover:bg-warmBg transition-transform hover:scale-105">
-              <span>✉️ 寫信給巧妮（he00781234@gmail.com）</span>
-            </a>
-
-            <button id="copy-email-btn" type="button"
-              class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-4 rounded-full bg-warmCoffee/30 hover:bg-warmCoffee/50 text-white border border-white/40 font-round font-bold text-base transition-colors">
-              <span>📋 複製信箱</span>
-            </button>
-          </div>
-
-          <!-- 複製成功訊息框（取代 alert） -->
-          <p id="copy-feedback" role="status" class="mt-4 text-sm sm:text-base font-round font-bold text-white opacity-0 transition-opacity duration-300">
-            ✅ 已成功複製信箱：he00781234@gmail.com
+        <!-- 大字引言 -->
+        <div class="quote-banner reveal">
+          <div class="quote-mark" aria-hidden="true">“</div>
+          <p class="quote-text">
+            一個人的價值，在於他貢獻了什麼，而不在於他能得到什麼；不要試圖去做一個成功的人，要努力成為一個有價值的人。
           </p>
         </div>
+
+        <!-- 左右分欄：照片 + 故事與原則 -->
+        <div class="about-grid">
+          <div class="about-photo-box reveal">
+            <img
+              src="about.jpg"
+              alt="鄭巧妮工作與學習日常"
+              loading="lazy"
+              onerror="this.onerror=null; this.src='https://picsum.photos/seed/cozyworkspace/600/750';"
+            >
+          </div>
+
+          <div class="about-content-stack">
+            <div class="bento-card about-story-card reveal">
+              <p>
+                目前我在新竹市的身心障礙機構擔任<strong>教保督導</strong>，同時也是<strong>社會工作學系碩士在職專班</strong>的研究生。
+              </p>
+              <p>
+                大學畢業於特殊教育學系並取得教師證，求學期間也廣泛修習心理諮商輔導相關課程。在正式踏入機構前，我曾累積過餐飲、宴會廳、家教、補習班、幼兒才藝到國小特教教師等多元的職場歷練，這些經驗培養了我極佳的抗壓性與環境適應力。
+              </p>
+              <p>
+                畢業後，我進入日間照顧機構從第一線教保員做起，一路成長並晉升為教保督導，現在則透過進修社工碩士，持續深化自己的助人視野。
+              </p>
+            </div>
+
+            <div class="about-mini-grid">
+              <div class="mini-info-card reveal">
+                <h3>📒 我的做事原則</h3>
+                <p>講求 SOP、注重細節且追求完美，喜歡挑戰與突破限制解決問題，讓服務品質維持穩定一致。</p>
+              </div>
+              <div class="mini-info-card reveal">
+                <h3>☕ 私下真實的我</h3>
+                <p>脫下工作外衣，其實我也有點迷糊、善良，非常重視團隊和諧。雖然偶爾對自己的領導能力還會沒自信，但我始終相信真誠傾聽的力量。</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
+    <!-- 區塊二：專長技能 -->
+    <section id="skills">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow">SKILLS</span>
+          <h2 class="section-title">專長技能</h2>
+          <p class="section-subtitle">結合視覺表達、行政系統化與第一線活動設計的實務能力</p>
+        </div>
+
+        <div class="skills-grid" id="skillsGrid">
+          <div class="skill-card reveal">
+            <div class="skill-top">
+              <span class="skill-name">🌻 Canva</span>
+              <span class="skill-level-badge">熟練</span>
+            </div>
+            <div class="skill-bar-track" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+              <div class="skill-bar-fill" data-width="85%"></div>
+            </div>
+            <p class="skill-desc">製作美宣海報與報告簡報，用溫暖清楚的視覺設計傳遞活動與專業資訊。</p>
+          </div>
+
+          <div class="skill-card reveal">
+            <div class="skill-top">
+              <span class="skill-name">📂 文書軟體</span>
+              <span class="skill-level-badge">熟練</span>
+            </div>
+            <div class="skill-bar-track" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+              <div class="skill-bar-fill" data-width="85%"></div>
+            </div>
+            <p class="skill-desc">處理行政文書、服務計畫建置與評鑑資料檢核，確保紀錄完整與標準化。</p>
+          </div>
+
+          <div class="skill-card reveal">
+            <div class="skill-top">
+              <span class="skill-name">🏖️ 活動規劃</span>
+              <span class="skill-level-badge">熟練</span>
+            </div>
+            <div class="skill-bar-track" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+              <div class="skill-bar-fill" data-width="85%"></div>
+            </div>
+            <p class="skill-desc">設計並執行教保活動與幼兒才藝課程，依據服務對象需求細膩調整引導方式。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 區塊三：經歷 -->
+    <section id="experience" class="section-alt">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow">EXPERIENCE</span>
+          <h2 class="section-title">學經歷與成長軌跡</h2>
+          <p class="section-subtitle">從校園社團、多元服務業到特教與社工助人現場</p>
+        </div>
+
+        <div class="timeline">
+          <!-- 經歷 5 (最近) -->
+          <article class="timeline-item featured reveal">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <span class="timeline-date">2024年10月 － 至今</span>
+            <h3 class="timeline-role">愛恆社會福利基金會附設愛恆啟能中心｜教保督導</h3>
+            <ul class="timeline-list">
+              <li>建置專業服務系統，提升整體服務的系統化、標準化與可持續發展能力。</li>
+              <li>教保組業務督導與檢核，確保 KPI 項目落實，協助教保、社工及行政人員依規定與標準執行服務。</li>
+              <li>建立明確的活動與服務執行方向，降低執行落差，提升服務品質的一致性。</li>
+              <li>確保服務計畫、活動設計與紀錄內容，真實反映服務對象的參與情形。</li>
+              <li>檢核評鑑資料與服務紀錄之完整性，以支援評鑑、稽核及內部管理。</li>
+              <li>支持第一線人員專業成長，促進團隊運作穩定與服務品質持續提升。</li>
+            </ul>
+          </article>
+
+          <!-- 經歷 4 -->
+          <article class="timeline-item reveal">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <span class="timeline-date">2018年9月 － 2024年6月</span>
+            <h3 class="timeline-role">多元餐飲與門市服務人員</h3>
+            <p class="timeline-text">
+              曾任涮涮鍋外場工讀生、居酒屋外場工讀生、搗飛豆花門市店員、宴會廳服務員、三商餐飲拿坡里門市店員。負責開店與閉店製料作業、細心提供客戶服務，並精熟櫃台業務與 POS 機操作結帳。
+            </p>
+          </article>
+
+          <!-- 經歷 3 -->
+          <article class="timeline-item reveal">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <span class="timeline-date">2019年3月 － 2022年7月</span>
+            <h3 class="timeline-role">才藝老師、課後照顧班老師、家教老師</h3>
+            <p class="timeline-text">
+              負責課程規劃與執行、教導幼兒組裝操作動力積木，並耐心陪伴與協助學生完成課業及檢查。
+            </p>
+          </article>
+
+          <!-- 經歷 2 -->
+          <article class="timeline-item reveal">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <span class="timeline-date">2018 － 2022年</span>
+            <h3 class="timeline-role">臺北教育大學 特殊教育學系</h3>
+            <p class="timeline-text">
+              修習特殊教育專業與心理諮商輔導相關課程，完成教育實習並取得教師證。
+            </p>
+          </article>
+
+          <!-- 經歷 1 -->
+          <article class="timeline-item reveal">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <span class="timeline-date">2016 － 2017年</span>
+            <h3 class="timeline-role">新竹女中 希望之旅社｜第十四屆總務</h3>
+            <p class="timeline-text">
+              從社員一路成長並擔任社團幹部，學習團隊溝通與社務行政。
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 區塊四：興趣與生活 -->
+    <section id="life">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow">LIFE & INTERESTS</span>
+          <h2 class="section-title">興趣與生活</h2>
+          <p class="section-subtitle">在助人工作與碩士課業之外，為自己充電的日常小事</p>
+        </div>
+
+        <div class="life-grid">
+          <article class="life-card reveal">
+            <div class="life-img-wrap">
+              <img
+                src="life1.jpg"
+                alt="唱歌與音樂日常"
+                loading="lazy"
+                onerror="this.onerror=null; this.src='https://picsum.photos/seed/singingmic/600/420';"
+              >
+            </div>
+            <div class="life-body">
+              <h3 class="life-title">🎶 唱歌</h3>
+              <p class="life-desc">用歌聲抒發日常情感，在旋律裡找回純粹的快樂。</p>
+            </div>
+          </article>
+
+          <article class="life-card reveal">
+            <div class="life-img-wrap">
+              <img
+                src="life2.jpg"
+                alt="電影時光"
+                loading="lazy"
+                onerror="this.onerror=null; this.src='https://picsum.photos/seed/cinemacozy/600/420';"
+              >
+            </div>
+            <div class="life-body">
+              <h3 class="life-title">🎞️ 電影</h3>
+              <p class="life-desc">喜歡在光影故事中感受不同的人生風景，滋養共情與想像力。</p>
+            </div>
+          </article>
+
+          <article class="life-card reveal">
+            <div class="life-img-wrap">
+              <img
+                src="life3.jpg"
+                alt="排球運動時光"
+                loading="lazy"
+                onerror="this.onerror=null; this.src='https://picsum.photos/seed/volleyballcourt/600/420';"
+              >
+            </div>
+            <div class="life-body">
+              <h3 class="life-title">🏐 排球</h3>
+              <p class="life-desc">享受在球場上與夥伴團隊合作、揮灑汗水的熱血時光。</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 區塊五：專業知識區 (預留規劃) -->
+    <section id="knowledge" class="section-alt">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow">KNOWLEDGE</span>
+          <h2 class="section-title">專業知識筆記</h2>
+          <p class="section-subtitle">整理教保實務、特教陪伴與社工學習的常見問答</p>
+        </div>
+
+        <div class="knowledge-placeholder reveal">
+          <div class="knowledge-icon" aria-hidden="true">📙</div>
+          <h3>知識文章正在溫暖籌備中</h3>
+          <p>
+            這裡將陸續分享身心障礙陪伴、教保活動設計與助人工作的實務經驗筆記，希望能為正在尋找方向的夥伴帶來一點光亮與參考。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 區塊六：聯絡與行動區 -->
+    <section id="contact">
+      <div class="container">
+        <div class="contact-card reveal">
+          <h2>歡迎與我聯繫</h2>
+          <p>
+            無論是服務諮詢、經驗交流或合作邀約，都歡迎透過 Email 聯繫我，我會盡快回覆你。
+          </p>
+          <a href="mailto:he00781234@gmail.com" class="btn-white">
+            <span>🐚</span>
+            <span>寄信給巧妮（he00781234@gmail.com）</span>
+          </a>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <!-- ==================== 頁尾 Footer ==================== -->
-  <footer class="bg-warmCoffee text-warmApricot py-10 px-4 sm:px-6 lg:px-8 mt-8">
-    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
-      <div>
-        <p class="font-round font-bold text-lg text-white">巧妮｜身心障礙機構教保督導</p>
-        <p class="text-sm text-warmApricot/80 mt-1">特殊教育・教保實務諮詢・兒童才藝課業指導・Canva 美宣設計</p>
-      </div>
-      <div class="text-sm text-warmApricot/80">
-        © 2026 巧妮. All rights reserved.
-      </div>
+  <!-- 頁尾 -->
+  <footer>
+    <div class="container">
+      <p>© 2026 鄭巧妮 Ni｜新竹市・溫柔堅定的專業助人者 🌊🐚</p>
     </div>
   </footer>
 
-  <!-- 互動功能 3：回到頂端按鈕 -->
-  <button id="back-to-top" type="button" aria-label="回到頂端"
-    class="fixed bottom-6 right-6 z-50 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-warmOrange text-white shadow-lg flex items-center justify-center text-xl font-round font-black opacity-0 pointer-events-none translate-y-4 transition-all duration-300 hover:bg-warmCoffee focus:outline-none">
+  <!-- 回到頂端按鈕 -->
+  <button type="button" class="back-to-top" id="backToTop" aria-label="回到頂端" title="回到頂端">
     ↑
   </button>
 
-  <!-- 隱藏的 input 用於安全複製剪貼簿 -->
-  <input type="text" id="hidden-email-input" value="he00781234@gmail.com" aria-hidden="true" class="sr-only" readonly />
-
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      // 1. 手機版漢堡選單切換
-      const menuBtn = document.getElementById('mobile-menu-btn');
-      const mobileMenu = document.getElementById('mobile-menu');
-      const hamburgerIcon = document.getElementById('hamburger-icon');
-      const closeIcon = document.getElementById('close-icon');
-      const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+      // 1. 深淺色切換 (Theme Toggle)
+      const themeToggle = document.getElementById('themeToggle');
+      const htmlEl = document.documentElement;
+      const savedTheme = localStorage.getItem('ni-theme');
 
-      function toggleMenu() {
-        const isHidden = mobileMenu.classList.contains('hidden');
-        if (isHidden) {
-          mobileMenu.classList.remove('hidden');
-          hamburgerIcon.classList.add('hidden');
-          closeIcon.classList.remove('hidden');
-          menuBtn.setAttribute('aria-expanded', 'true');
+      if (savedTheme === 'dark') {
+        htmlEl.setAttribute('data-theme', 'dark');
+        themeToggle.textContent = '☀️';
+      }
+
+      themeToggle.addEventListener('click', () => {
+        const isDark = htmlEl.getAttribute('data-theme') === 'dark';
+        if (isDark) {
+          htmlEl.removeAttribute('data-theme');
+          themeToggle.textContent = '🌙';
+          localStorage.setItem('ni-theme', 'light');
         } else {
-          mobileMenu.classList.add('hidden');
-          hamburgerIcon.classList.remove('hidden');
-          closeIcon.classList.add('hidden');
-          menuBtn.setAttribute('aria-expanded', 'false');
+          htmlEl.setAttribute('data-theme', 'dark');
+          themeToggle.textContent = '☀️';
+          localStorage.setItem('ni-theme', 'dark');
         }
-      }
+      });
 
-      if (menuBtn) {
-        menuBtn.addEventListener('click', toggleMenu);
-      }
-      mobileLinks.forEach(link => {
+      // 2. 手機版漢堡選單
+      const menuToggle = document.getElementById('menuToggle');
+      const navLinks = document.getElementById('navLinks');
+
+      menuToggle.addEventListener('click', () => {
+        const isOpen = navLinks.classList.toggle('open');
+        menuToggle.setAttribute('aria-expanded', String(isOpen));
+        menuToggle.textContent = isOpen ? '✕' : '☰';
+      });
+
+      navLinks.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => {
-          if (!mobileMenu.classList.contains('hidden')) {
-            toggleMenu();
-          }
+          navLinks.classList.remove('open');
+          menuToggle.setAttribute('aria-expanded', 'false');
+          menuToggle.textContent = '☰';
         });
       });
 
-      // 2. 互動功能一 & 二：捲動淡入（Scroll Fade-in）＋ 技能長條動畫（Skill Bars）
-      const revealElements = document.querySelectorAll('.reveal-on-scroll');
-      const skillBars = document.querySelectorAll('.skill-bar-fill');
+      // 3. 打字效果 (開場關鍵字輪播)
+      const typingEl = document.getElementById('typingText');
+      const keywords = ['溫柔堅定', '問題解決', '專業助人'];
+      let wordIndex = 0;
+      let charIndex = keywords[0].length;
+      let isDeleting = false;
 
-      const observerOptions = {
-        root: null,
-        rootMargin: '0px 0px -60px 0px',
-        threshold: 0.15
-      };
+      function typeLoop() {
+        const currentWord = keywords[wordIndex];
+        if (isDeleting) {
+          charIndex--;
+          typingEl.textContent = currentWord.substring(0, charIndex);
+        } else {
+          charIndex++;
+          typingEl.textContent = currentWord.substring(0, charIndex);
+        }
 
-      const scrollObserver = new IntersectionObserver((entries, observer) => {
+        let speed = isDeleting ? 80 : 140;
+
+        if (!isDeleting && charIndex === currentWord.length) {
+          speed = 1800;
+          isDeleting = true;
+        } else if (isDeleting && charIndex === 0) {
+          isDeleting = false;
+          wordIndex = (wordIndex + 1) % keywords.length;
+          speed = 350;
+        }
+
+        setTimeout(typeLoop, speed);
+      }
+      setTimeout(typeLoop, 1800);
+
+      // 4. 捲動淡入 & 技能長條動畫 (IntersectionObserver)
+      const revealEls = document.querySelectorAll('.reveal');
+
+      const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             entry.target.classList.add('is-visible');
 
-            // 若該區塊包含技能長條，觸發寬度展開動畫
-            const barsInSection = entry.target.querySelectorAll('.skill-bar-fill');
-            barsInSection.forEach(bar => {
-              const targetWidth = bar.getAttribute('data-width');
-              if (targetWidth) {
-                bar.style.width = targetWidth;
-              }
-            });
-
-            observer.unobserve(entry.target);
+            // 若進入技能卡片，觸發技能長條延展
+            const bar = entry.target.querySelector('.skill-bar-fill');
+            if (bar && bar.dataset.width) {
+              bar.style.width = bar.dataset.width;
+            }
           }
         });
-      }, observerOptions);
+      }, { threshold: 0.15 });
 
-      revealElements.forEach(el => scrollObserver.observe(el));
+      revealEls.forEach(el => observer.observe(el));
 
-      // 3. 互動功能三：回到頂端按鈕（Back to Top）
-      const backToTopBtn = document.getElementById('back-to-top');
+      // 5. 閱讀進度條 & 回到頂端按鈕
+      const progressBar = document.getElementById('readingProgress');
+      const backToTopBtn = document.getElementById('backToTop');
+
       window.addEventListener('scroll', () => {
-        if (window.scrollY > 360) {
-          backToTopBtn.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-4');
-          backToTopBtn.classList.add('opacity-100', 'translate-y-0');
+        const scrollTop = window.scrollY || document.documentElement.scrollTop;
+        const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+        progressBar.style.width = progress + '%';
+
+        if (scrollTop > 360) {
+          backToTopBtn.classList.add('visible');
         } else {
-          backToTopBtn.classList.add('opacity-0', 'pointer-events-none', 'translate-y-4');
-          backToTopBtn.classList.remove('opacity-100', 'translate-y-0');
+          backToTopBtn.classList.remove('visible');
         }
-      });
+      }, { passive: true });
 
       backToTopBtn.addEventListener('click', () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
       });
-
-      // 4. 點擊「預約諮詢此服務」時，自動更新聯絡區主旨與提示
-      const serviceBtns = document.querySelectorAll('.service-inquiry-btn');
-      const selectedBanner = document.getElementById('selected-service-banner');
-      const selectedName = document.getElementById('selected-service-name');
-      const mailtoBtn = document.getElementById('mailto-btn');
-
-      serviceBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-          const serviceTitle = btn.getAttribute('data-service');
-          if (serviceTitle && selectedBanner && selectedName && mailtoBtn) {
-            selectedName.textContent = serviceTitle;
-            selectedBanner.classList.remove('hidden');
-            const encodedSubject = encodeURIComponent(`【預約詢問】您好巧妮，我想洽詢「${serviceTitle}」`);
-            mailtoBtn.setAttribute('href', `mailto:he00781234@gmail.com?subject=${encodedSubject}`);
-          }
-        });
-      });
-
-      // 5. 複製信箱按鈕（相容 iFrame 環境）
-      const copyBtn = document.getElementById('copy-email-btn');
-      const hiddenInput = document.getElementById('hidden-email-input');
-      const copyFeedback = document.getElementById('copy-feedback');
-
-      if (copyBtn && hiddenInput && copyFeedback) {
-        copyBtn.addEventListener('click', () => {
-          hiddenInput.classList.remove('sr-only');
-          hiddenInput.select();
-          hiddenInput.setSelectionRange(0, 99999);
-          try {
-            document.execCommand('copy');
-            copyFeedback.classList.remove('opacity-0');
-            setTimeout(() => {
-              copyFeedback.classList.add('opacity-0');
-            }, 3000);
-          } catch (err) {
-            console.error('複製失敗', err);
-          }
-          hiddenInput.classList.add('sr-only');
-        });
-      }
     });
   </script>
 </body>
